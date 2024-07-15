@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="FCC Certification Project #3 Technical Documentation Page">
+      <title>FCC Technical Documentation Page</title>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+   </head>
+   <body>
+         <nav id="navbar">
+            <header id="nav-header">Machine Learning Documentation</header>
+            <a class="nav-link" href="#introduction"><span>Introduction</span></a>
+            <a class="nav-link" href="#differentiation"><span>Differentiation</span></a>
+            <a class="nav-link" href="#types"><span>Types</span></a>
+            <a class="nav-link" href="#supervised_learning"><span>Supervised Learning</span></a>
+            <a class="nav-link" href="#unsupervised_learning"><span>Unsupervised Learning</span></a>
+            <a class="nav-link" href="#reinforcement_learning"><span>Reinforcement Learning</span></a>
+         </nav>
+      <main id="main-doc">
+         <section class="main-section" id="introduction">
+           <header><p class="section-title" >Introduction</p></header>
+            <p class="section-content"> Machine Learning - is a subdomain of Computer Science that focuses on algorithms
+                which help a computer learn from data without (a programmer being there telling what to do) 
+                also known as explicit programming. Most of machine learning deals with Arrays which is a collection of data 
+                as seen in the example below:</p>
+            <code class="section-code">
+               myArray = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+            </code>
+         </section>
+         <section class="main-section" id="differentiation">
+            <header><p class="section-title">Differentiation</p></header>   
+            <p class="section-content"> 
+               What's the difference between Artificial Intelligence, Machine Learning and Data Science?
+               <ul>
+                  <li><span>Artificial Intelligence</span> - an area of computer science where the goal is to enable computers and machines 
+                     to perform human-like tasks and simulate human behavior.</li>
+                  <li><span>Machine Learning</span> - subset of AI that tries to solve specific problems and make predictions using data.</li>
+                  <li><span>Data Science</span> - a field that attempts to find patterns and draw insights from data (might use Machine Learning)</li>
+               </ul>
+            </p>
+         </section>
+         <section class="main-section" id="types">
+            <header><p class="section-title">Types</p></header>
+            <p class="section-content"> There are <b>3 types</b> in Machine Learning: <b><i>Supervised Learning, Unsupervised Learning</i></b> and <b><i>Reinforcement Learning.</i></b></p>
+         </section>
+         <section class="main-section" id="supervised_learning">
+            <header><p class="section-title">Supervised Learning</p></header> 
+            <p class="section-content"> 
+             Uses labeled inputs (meaning the input has a corresponding output label) to train models and learn outputs. 
+             To a computer, pictures are just pixels with colors, there is really no “learning” going on. When we attach “labels” to these pixels, the computer is learning based on images 
+             to depict what a picture signifies. Below is an example line of code using scikit-learn in Python 
+            </p>
+            <code class="section-code">
+               from sklearn.linear_model import LinearRegression <br>
+               model = LinearRegression() <br>
+            </code>
+            <code class="section-code">
+               model.fit(X_train, y_train) <br>
+            </code>
+         </section>
+         <section class="main-section" id="unsupervised_learning">
+            <header><p class="section-title">Unsupervised Learning</p></header>
+            <p class="section-content"> 
+               Uses unlabeled data to learn about patterns in data. again, to a computer, all images are just pixels with colors, there is really no “learning” going on.
+               but when we feed all a lot of images to a computer, it will start clustering these images based on the pattern it sees such as what is in common with these various images.
+               Below is an example of a simple unsupervised learning code using scikit-learn in Python, specifically for training a K-means clustering model:
+            </p>
+            <code class="section-code">
+               model.fit(X)
+            </code>
+         </section>
+         <section class="main-section" id="reinforcement_learning">
+            <header><p class="section-title">Reinforcement Learning</p></header>
+            <p class="section-content"> 
+               Machine/agent learning in an interactive environment based on rewards and penalties.
+               <ul>
+                  <li> 
+                     like training a dog, there isn't necessarily structure on what is “right” or “wrong”, just the things that we teach the dog what it is. If we believe what the dog is doing is right ->
+                      we reward the dog. If we think what the dog is doing is wrong -> we penalize the dog.
+                  </li>
+                  <li> 
+                     similar to training a dog wherein there is not a inherent “good” or “bad” moral compass, we teach the computer to do something then reward it if it is right and penalize it if it is doing wrong.
+                  </li>
+               </ul>
+               Below is an example of a single line of code for reinforcement learning using the OpenAI Gym library, specifically for taking an action in an environment:
+            </p>
+            <code class="section-code">
+               observation, reward, done, info = env.step(action)
+            </code>
+         </section>
+      </main>
+   </body>
+</html>
